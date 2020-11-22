@@ -87,30 +87,6 @@ async function userRoute (server, options) {
     })
     await reply
   })
-
-  // server.register(require('fastify-auth'))
-  // server.decorate('verifyToken', async function (request, reply) {
-  //   console.log('executed 1')
-  // })
-
-  // server.ready(err => {
-  //   if (err) throw err
-  //   server.addHook('preHandler', server.auth([server.verifyToken]))
-  // })
-
-  // server.addHook('preHandler', server.auth([server.verifyToken]))
-
-  // server.post('/api/user/verify', {
-  //   schema: schema.auth
-  //   // preHandler: server.auth([
-  //   //   async function (request, reply) { console.log('executed 1') }
-  //   // ], { relation: 'and' })
-  // }, async (request, reply) => {
-  //   await reply.code(200).send({
-  //     message: 'Verify user success!',
-  //     statusCode: 200
-  //   })
-  // })
 }
 
 module.exports = userRoute
